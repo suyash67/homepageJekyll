@@ -1,0 +1,78 @@
+I"-<div class="home-proj-list"><ul class="post-list">
+        
+            <!-- List projects here --><li>
+                    
+                        <li><span class="post-meta">Oct 19, 2019</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2019/10/19/eff-proof-of-reserves.html">
+                            Efficient Proof of Reserves for Cryptocurrency Exchanges
+                            </a>
+                        </h3><!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Projects/crypto-exchange.png" />
+        <figcaption></figcaption>
+    </figure>
+With the rise of crypto exchanges for enabling customers own crypto assets, the recent hacks and scams have created a distrust in the minds of customers. I am designing cryptographic protocols as one of the ways to help prevent such undesirable circumstances.</li>      
+                    
+                        <li><span class="post-meta">Aug 18, 2019</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2019/08/18/mprove-drawback.html">
+                            Solving the Chicken &amp; Hen Problem of MProve
+                            </a>
+                        </h3><!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Projects/monero.jpg" />
+        <figcaption></figcaption>
+    </figure>
+MProve is a recent proof of reserves protocol for Monero. Although equipped with the guarantees of non-collusion, inflation resistance and address privacy, it has some drawbacks. I attempted to overcome those in this work.</li>      
+                    
+                        <li><span class="post-meta">May 1, 2019</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2019/05/01/dybm.html">
+                            Dynamic Boltzmann Machines
+                            </a>
+                        </h3><!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Projects/dybm_cover.png" />
+        <figcaption></figcaption>
+    </figure>
+With a motive to get a better understanding of modelling human brain and explore its effectivity in in real-life problems, I worked on Dynamic Boltzmann Machines. Read to know more about our work.</li>      
+                    
+                        <li><span class="post-meta">Nov 30, 2018</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2018/11/30/plasticity-based-learning.html">
+                            Plasticity-based Learning in DNNs
+                            </a>
+                        </h3><!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Projects/plasticity_cover.png" />
+        <figcaption></figcaption>
+    </figure>
+Plasticity is one of the fundamental properties which helps our neurons memorize efficiently. In this project, we explored performance of Hebbian plasticity-induced DNNs in comparison to conventional DNNs.</li>      
+                    
+                        <li><span class="post-meta">Aug 17, 2018</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2018/08/17/cadence-intern.html">
+                            Fast 3D &amp; Depth-separable Convolution on HiFi4 DSP
+                            </a>
+                        </h3><!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Projects/convolution.png" />
+        <figcaption></figcaption>
+    </figure>
+I spent summers of 2018 at Cadence Design Systems, Pune working on designing efficient and fast algorithms to implements 3D and Depth Separable Convolution for Automatic Speech Recognition purposes.</li>      
+                    
+                </li>
+            <!-- List projects here -->
+    </ul></div>
+:ET
