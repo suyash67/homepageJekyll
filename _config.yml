@@ -7,6 +7,8 @@ description: > # this means to ignore newlines until "show_excerpts:"
 baseurl: "/homepage"
 url: ""
 
+include: ['.htaccess']
+
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -16,7 +18,7 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: yet_to_come
+    twitter: BagadSuyash
     github:  suyash67
     # rss: rss
     # dribbble: jekyll

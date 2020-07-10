@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Efficient Proof of Reserves for Cryptocurrency Exchanges"
+title: "Shorter, Privacy-Preserving Proof of Reserves for Cryptocurrency Exchanges"
 categories: project
 image: "crypto-exchange.png"
 caption: "Image courtesy: The Poloniex Blog"

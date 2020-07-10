@@ -23,8 +23,9 @@ I am a final year student pursuing B.Tech and M.Tech (Dual Degree) in <a href="h
 at the <a href = "http://iitb.ac.in/"> Indian Institute of Technology, Bombay</a>.
 I am broadly interested in cryptographic protocols that help strengthen the security and privacy guarantees of cryptocurrencies,
 paving way for a decentralized economy.
-I am currently working towards my masters' thesis on <a href="{{ site.baseurl }}/project/2019/10/19/eff-proof-of-reserves.html"> Efficient Proof of Reserves for Cryptocurrency Exchanges</a>, 
+I worked on <a href="{{ site.baseurl }}/project/2019/10/19/eff-proof-of-reserves.html"> Designing Shorter, Privacy-Preserving Proof of Reserves for Cryptocurrency Exchanges</a> as a part of master's thesis, 
 guided by <a href="https://www.ee.iitb.ac.in/~sarva/"> Prof. Saravanan Vijayakumaran</a>. <br id="paddedlinebreak" />
+I have also worked on analysing the confidentiality of amounts in Grin.
 
 <div class="line-break-small">
 <br/>
@@ -49,10 +50,48 @@ on <a href="{{ site.baseurl }}/project/2018/08/17/cadence-intern.html">Fast 3D &
 Apart from research, I have been actively involved in social service since my freshman year. 
 I was an Overall Coordinator of <a href="https://gymkhana.iitb.ac.in/~nss/home/">NSS, IIT Bombay</a> in 2018-'19, 
 leading a 3-tier team of 400 volunteers in planning and executing more than 30 initiatives aimed at conserving 
-environment, educating the underprivileged and imbibing sustainability in our lives. 
+environment, educating the underprivileged and imbibing sustainability in our lives.
+
 
 ## Publications
-1. **Revelio+: An Efficient MimbleWimble Proof of Reserves Protocol**  
-Under review at *Financial Cryptography and Data Security*, 2020  
+1. **Performance Trade-offs in Design of MimbleWimble Proofs of Reserves** 
+&nbsp; <a href="https://ieeesb.org/index.html#papers"><i class="far fa-file-pdf"></i></a>
+&nbsp; <a href="https://github.com/suyash67/RevelioBP"><i class="fab fa-github"></i></a>  
+Accepted at *[IEEE Security & Privacy on Blockchain](https://ieeesb.org/) (IEEE S&B)*, 2020  
 **Suyash Bagad** and Saravanan Vijayakumaran
+
+2. **On the Confidentiality of Amounts in Grin**
+&nbsp; <a href="https://eprint.iacr.org/2020/723.pdf"><i class="far fa-file-pdf"></i></a> 
+&nbsp; <a href="https://slides.com/suyashbagad/confidentiality-of-amounts-in-grin/fullscreen"><i class="fas fa-chalkboard"></i></a>
+&nbsp; <a href="https://www.youtube.com/watch?v=EFrvrct3U2g&t=4s"><i class="far fa-play-circle"></i></a>  
+Accepted at *[Crypto Valley Conference on Blockchain Technology](https://www.cryptovalleyconference.com/) (CVCBT)*, 2020  
+**Suyash Bagad** and Saravanan Vijayakumaran  
+
+3. **MProve+: Privacy-Preserving Proof of Assets Protocol for Monero**  
+In preparation for submission to *[IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)*<sup>&Dagger;</sup> 
+<!-- Arijit Dutta<sup>&dagger;</sup>, **Suyash Bagad**<sup>&dagger;</sup> and Saravanan Vijayakumaran<br/>
+<sub>&dagger; : Equal contribution, &Dagger; : Journal Impact Factor: 6.211 </sub> -->
+Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
+<sub> &Dagger; : Journal Impact Factor: 6.211 </sub>
+
+
+## Updates
+- June, 2020: Presented my master's thesis titled **A Proof of Reserves Protocol with Short Proofs and a Method to Estimate Amount Upper Bounds for MimbleWimble**. Report present [here]({{ site.baseurl }}/assets/pdfs/suyash-masters-thesis.pdf), 
+slides [here](https://slides.com/suyashbagad/ddp-thesis-presentation-suyashbagad/fullscreen) and
+video [here](https://youtu.be/n67DXLNjKHg).
+
+- May, 2020: Paper titled **On Confidentiality of Amounts in Grin**, first of its kind work on amount confidentiality of Pedersen commitments in Grin, accepted at [Crypto Valley Conference on Blockchain Technology](https://www.cryptovalleyconference.com/), 2020. Pre-print available [here](https://eprint.iacr.org/2020/723.pdf) and presentation video [here](https://youtu.be/EFrvrct3U2g)!
+
+- April, 2020: Paper on **Performance Trade-offs in Design of MimbleWimble Proofs of Reserves** 
+accepted at [IEEE Security & Privacy on Blockchain](https://ieeesb.org/), 2020. Pre-print to be added soon!
+
+- Feb, 2020: Selected as **1 out of 30** students from all over India for the workshop on 
+<a href="https://www.icts.res.in/discussion-meeting/fabt2020">Foundational Aspects of Blockchain Technology</a>, 2020 at *International Centre for Theoretical Sciences*, TIFR, Bangalore
+
+- Jan, 2020: Appointed as Teaching Assistant of the course [EE 720: Introduction to Number Theory and Cryptography](https://www.ee.iitb.ac.in/~sarva/courses/EE720/Spring2020.html)
+
+- Oct, 2019: Successfully presented Dual-degree Phase 1 presentation to a committee consisting of [Prof. Vijayakumaran](https://www.ee.iitb.ac.in/~sarva/) and [Prof. Sachin Patkar](https://www.ee.iitb.ac.in/wiki/faculty/patkar), Electrical Engineering, IIT Bombay ([Report]({{ site.baseurl }}/assets/pdfs/ddp1_report.pdf))
+
+- Aug, 2019: Appointed as the *only* Teaching Assistant of the course [EE 465: Cryptocurrency & Blockchain Technologies](https://www.ee.iitb.ac.in/~sarva/courses/EE465/Autumn2019.html)
+
 

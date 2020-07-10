@@ -1,0 +1,12 @@
+{% capture imgPath %}{{ include.name }}{% endcapture %}
+<div class="flexslider">
+    <ul class="slides">
+          {% for image in site.static_files %}
+              {% if image.path contains imgPath %}
+              <li>
+                  <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+              </li>
+              {% endif %}
+          {% endfor %}
+    </ul>
+  </div>
