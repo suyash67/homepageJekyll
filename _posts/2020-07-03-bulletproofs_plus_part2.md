@@ -135,4 +135,63 @@ V^{y^{n+1}} \cdot g^{-\zeta(y,z)}}_{\textsf{Verifier}}
 
 Hereafter, the prover can run $zk\textrm{-}\textsf{WIP}(\textbf{g}, \textbf{h}, g, h, \hat{A}; \hat{\textbf{g}}, \hat{\textbf{g}}, \hat{\alpha})$.
 
+### Performance Comparison
+
+Although the construction of Bulletproofs and Bulletproofs+ is very similar, we expect some differences in their performances. We will analyse the differences in proof sizes and running times.  
+
+#### Proof sizes
+
+For secret vector size $n$, the proof size of the inner product (IP) argument used in Bulletproofs is $2\lceil \text{log}_2(n) \rceil$ elements in $\mathbb{G}$ and $2$ elements in $\mathbb{Z}_q$.
+On the other hand, the proof size for the weighted inner product (WIP) argument is $2\lceil \text{log}_2(n) \rceil + 2$ elements in $\mathbb{G}$ and $3$ elements in $\mathbb{Z}_q$.
+The additional elements in the WIP argument as against IP argument is because WIP argument is zero-knowledge and IP argument is not zero-knowledge. We summarise the proof sizes of aggregated Bulletproofs and Bulletproofs+ protocols in the following table. Note that if $m$ is the number of proofs aggregated, the proof size increases by only $2\lceil \text{log}_2(m) \rceil$ group elements.
+
+<p align=center><EM>Proof size comparison</EM></p>
+
+| | # Elements in $\mathbb{G}$ | # Elements in $\mathbb{Z}_q$ |
+Inner Product | $2\lceil \text{log}_2(n) \rceil$ | $2$ |
+Bulletproofs (aggregated) | $2\lceil \text{log}_2(n) + \text{log}_2(m) \rceil + 4$ | $5$ |
+Weighted Inner Product | $2\lceil \text{log}_2(n) \rceil + 2$ | $3$ |
+Bulletproofs+ (aggregated) | $2\lceil \text{log}(n) + \text{log}_2(m) \rceil + 3$ | $3$ |
+
+#### Running Times 
+
+We have implemented Bulletproofs+ in the existing implementation of Bulletproofs in KZen-Networks' [bulletproofs](https://github.com/KZen-networks/bulletproofs) library.
+The prover and verifier's computation is $\mathcal{O}(n)$ in both Bulletproofs and Bulletproofs+.
+However, verification can significantly boosted by using a single multi-exponentiation check (read [this](https://github.com/KZen-networks/bulletproofs/pull/20#discussion_r436681850) to briefly understand how multi-exponentiation works). 
+Batching proofs together further improves generation and verification times.
+In most cryptocurrency systems, range proofs are required for proving that amounts hidden in Pederson commitments are 64-bit non-negative integers.
+Thus, we compare proof sizes [^1] and running times for $n=64$ and different batching configurations as shown in the following table.
+
+
+[^1]: Our implementation is over the $\texttt{secp256k1}$ curve in which private keys are $32$ bytes in size and public keys are $33$ bytes. Thus, the size of an element in $\mathbb{G}$ is $33$ bytes and that of an element in $\mathbb{Z}_q$ is $32$ bytes.
+
+
+<p align=center><EM>Performance comparison of Bulletproofs and Bulletproofs+</EM></p>
+<TABLE border="1">
+<TR><TH rowspan="3">$m$
+<TR><TH colspan="2">Proof size (B)<TH colspan="2">Generation time (ms)<TH colspan="2">Verification time (ms)
+<TR><TH>BP<TH>BP+<TH>BP<TH>BP+<TH>BP<TH>BP+
+<TR><TH>1
+<TD>688<TD>591
+<TD>82.0<TD>71.9
+<TD>32.7<TD>25.9
+<TR><TH>4
+<TD>820<TD>723
+<TD>302.9<TD>241.8
+<TD>119.5<TD>99.4
+<TR><TH>8
+<TD>886<TD>789
+<TD>663.1<TD>484.0
+<TD>253.1<TD>201.7
+<TR><TH>16
+<TD>952<TD>855
+<TD>1466.9<TD>1242.9
+<TD>517.0<TD>473.5
+<TR><TH>32
+<TD>1018<TD>921
+<TD>2416.1<TD>2601.9
+<TD>934.5<TD>1027.7</TD>
+<!-- </TABLE>   -->
+
+
 {% endkatexmm %}
