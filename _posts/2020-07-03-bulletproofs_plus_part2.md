@@ -164,6 +164,33 @@ Thus, we compare proof sizes [^1] and running times for $n=64$ and different bat
 All simulations were performed on an Intel® Core™ i7-5500U CPU running at 2.40GHz.
 
 
+
+### Applicability to Grin
+
+[Grin](https://grin.mw/) is a cryptocurrency project built using the [MimbleWimble](https://github.com/mimblewimble/grin/blob/master/doc/intro.md) protocol.
+It promises scalability, privacy and fungibility all at once.
+The amounts in Grin are hidden in *outputs* which are Pedersen commitments.
+Each output on the Grin blockchain is accompanied by a range proof proving that the amount hidden in it is in the range $[0,2^{64}-1]$. These range proofs constitute about 98% of the total blockchain size.
+Thus, range proofs with smaller proof sizes are very crucial. 
+Grin currently [employs](https://github.com/mimblewimble/grin/pull/711) Bulletproofs. 
+
+We can further improve the range proofs used in Grin by employing Bulletproofs+.
+For a March 2020 snapshot of the Grin blockchain, we have $N_b = 612,102$ valid blocks.
+The total number of outputs on the Grin blockchain were $N_o = 3,185,556$ out of which $N_{utxo} = 124,034$ are UTXOs (unspent transaction outputs). The total number of transactions (equals to the number of kernels) in Grin were $N_{tx} = 1,765,941$. Thus, we have
+- Number of outputs per transactions: $n_{optx} = \frac{N_o}{N_{tx}} = 1.80 \approx 2$
+- Number of outputs per block: $n_{opbl} = \frac{N_o}{N_{b}} = 5.20 \approx 6$
+- Number of trasactions per block: $n_{txpbl} = \frac{N_{tx}}{N_{b}} = 2.88 \approx 3$  
+
+Therefore, using Bulletproofs+, 200 bytes per transaction can be saved.
+Since we have 3 transactions per block on an average, 600 bytes per block can be saved.
+The typical number of Grin blocks mined in a day is 1500 (~1 block per minute).
+This implies that everyday, on an average, 1 MB of data can be saved from being added on to the blockchain, 
+Further, if a transaction contains large number of outputs, the fees for inclusion of that transaction is higher because of its greater size. Thus, transaction fees also would be reduced slightly on employing Bulletproofs+.
+Further, currently the UTXO set contains $\approx 165,000$ outputs. If we were to employ Bulletproofs+, the UTXO set size would reduce by about 16 MB. 
+Moreover, proof generation and verification can be faster by 20% and 16% respectively using Bulletproofs+ in place of Bulletproofs.
+
+
+
 [^1]: Our implementation is over the $\texttt{secp256k1}$ curve in which private keys are $32$ bytes in size and public keys are $33$ bytes. Thus, the size of an element in $\mathbb{G}$ is $33$ bytes and that of an element in $\mathbb{Z}_q$ is $32$ bytes.
 
 
@@ -193,6 +220,9 @@ All simulations were performed on an Intel® Core™ i7-5500U CPU running at 2.4
 <TD>2344.9<TD>2127.2 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>9.3%</small>
 <TD>927.7<TD>885.6 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>4.5%</small></TD>
 <!-- </TABLE>   -->
+
+
+
 
 
 {% endkatexmm %}
