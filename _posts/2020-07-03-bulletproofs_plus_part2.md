@@ -161,6 +161,7 @@ However, verification can significantly boosted by using a single multi-exponent
 Batching proofs together further improves generation and verification times.
 In most cryptocurrency systems, range proofs are required for proving that amounts hidden in Pederson commitments are 64-bit non-negative integers.
 Thus, we compare proof sizes [^1] and running times for $n=64$ and different batching configurations as shown in the following table.
+All simulations were performed on an Intel® Core™ i7-5500U CPU running at 2.40GHz.
 
 
 [^1]: Our implementation is over the $\texttt{secp256k1}$ curve in which private keys are $32$ bytes in size and public keys are $33$ bytes. Thus, the size of an element in $\mathbb{G}$ is $33$ bytes and that of an element in $\mathbb{Z}_q$ is $32$ bytes.
@@ -173,24 +174,24 @@ Thus, we compare proof sizes [^1] and running times for $n=64$ and different bat
 <TR><TH>BP<TH>BP+<TH>BP<TH>BP+<TH>BP<TH>BP+
 <TR><TH>1
 <TD>688<TD>591
-<TD>82.0<TD>71.9
-<TD>32.7<TD>25.9
+<TD>75.0<TD>59.3 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>20.9%</small>
+<TD>30.8<TD>25.3 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>17.8%</small>
 <TR><TH>4
 <TD>820<TD>723
-<TD>302.9<TD>241.8
-<TD>119.5<TD>99.4
+<TD>295.1<TD>234.1 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>20.7%</small>
+<TD>116.1<TD>97.5 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>16%</small>
 <TR><TH>8
 <TD>886<TD>789
-<TD>663.1<TD>484.0
-<TD>253.1<TD>201.7
+<TD>590.9<TD>473.5 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>19.8%</small>
+<TD>229.1<TD>197.5 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>13.8%</small>
 <TR><TH>16
 <TD>952<TD>855
-<TD>1466.9<TD>1242.9
-<TD>517.0<TD>473.5
+<TD>1187.4<TD>978.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>17.6%</small>
+<TD>469.4<TD>406.3 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>13.5%</small>
 <TR><TH>32
 <TD>1018<TD>921
-<TD>2416.1<TD>2601.9
-<TD>934.5<TD>1027.7</TD>
+<TD>2344.9<TD>2127.2 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>9.3%</small>
+<TD>927.7<TD>885.6 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>4.5%</small></TD>
 <!-- </TABLE>   -->
 
 
