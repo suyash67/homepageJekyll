@@ -76,6 +76,8 @@ Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
 
 
 ## Updates
+- Awarded **Undergraduate Research Award** for outstanding work in my master's thesis, being **1 out of 9** recipients in the graduating batch of 2020! 
+
 - June, 2020: Presented my master's thesis titled **A Proof of Reserves Protocol with Short Proofs and a Method to Estimate Amount Upper Bounds for MimbleWimble**. Report present [here]({{ site.baseurl }}/assets/pdfs/suyash-masters-thesis.pdf), 
 slides [here](https://slides.com/suyashbagad/ddp-thesis-presentation-suyashbagad/fullscreen) and
 video [here](https://youtu.be/n67DXLNjKHg).

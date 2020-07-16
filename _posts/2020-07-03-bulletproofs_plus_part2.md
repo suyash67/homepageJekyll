@@ -145,7 +145,7 @@ For secret vector size $n$, the proof size of the inner product (IP) argument us
 On the other hand, the proof size for the weighted inner product (WIP) argument is $2\lceil \text{log}_2(n) \rceil + 2$ elements in $\mathbb{G}$ and $3$ elements in $\mathbb{Z}_q$.
 The additional elements in the WIP argument as against IP argument is because WIP argument is zero-knowledge and IP argument is not zero-knowledge. We summarise the proof sizes of aggregated Bulletproofs and Bulletproofs+ protocols in the following table. Note that if $m$ is the number of proofs aggregated, the proof size increases by only $2\lceil \text{log}_2(m) \rceil$ group elements.
 
-<p align=center><EM>Proof size comparison</EM></p>
+<p align=center><EM>Table 1. Proof size comparison</EM></p>
 
 | | # Elements in $\mathbb{G}$ | # Elements in $\mathbb{Z}_q$ |
 Inner Product | $2\lceil \text{log}_2(n) \rceil$ | $2$ |
@@ -191,11 +191,40 @@ Moreover, proof generation and verification can be faster by 20% and 16% respect
 
 
 
-[^1]: Our implementation is over the $\texttt{secp256k1}$ curve in which private keys are $32$ bytes in size and public keys are $33$ bytes. Thus, the size of an element in $\mathbb{G}$ is $33$ bytes and that of an element in $\mathbb{Z}_q$ is $32$ bytes.
+### Applicability to Monero
+
+[Monero](https://web.getmonero.org/) is one of the first privacy-centered cryptocurrency project built on the [CryptoNote](https://cryptonote.org/whitepaper.pdf) protocol. The amounts in Monero are also Pedersen commitments and the Bulletproofs is [used](https://github.com/monero-project/monero/tree/master/src/ringct) to prove that they are in the range $[0,2^{64}-1]$. Thus, Bulletproofs+ could be used instead of Bulletproofs to improve performance.
+
+More specifically, each Monero transaction contains $2.5$ outputs on an average.
+This means that each transaction is accompanied by $2.5$ range proofs (Bulletproofs as of now).
+As Monero uses the $\texttt{Ed25519}$ curve, the size of a single Bulletproofs proof is $676$ bytes [^2].
+This could be reduced by $96$ bytes by using Bulletproofs+.
+In effect, about $240$ bytes per transaction could be saved. 
+Average number of transactions on 16th July was $11,417$.
+This implies that about $2.7$ MB of data can be saved everyday [^4]. 
+From the start of 2020 till date, on an average $28$ MB of data is added daily to the blockchain [^5].
+Therefore, Bulletproofs+ can save about $10\%$ of the data being added to the Monero blockchain!
+
+The running times of Bulletproofs and Bulletproofs+ over $\texttt{Ed25519}$ curve are noted below in Table 3.
+Note that the underlying Edwards curve's operations are used from [cryptoxide](https://lib.rs/crates/cryptoxide) library which is slower than the optimized operations in the more recent [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek)'s implementation.
+As we are interested only in comparison as of now, slower operations in the underlying curve library won't matter [^6]. Bulletproofs+ shows a $21\%$ faster proof generation and $17\%$ faster proof verification than Bulletproofs. Although these numbers would slightly vary when the underlying library for group operations changes, they still look quite promising from a user (prover) as well as miner (verifier) point of view! 
 
 
-<p align=center><EM>Performance comparison of Bulletproofs and Bulletproofs+</EM></p>
+[^1]: Grin uses $\texttt{secp256k1}$ curve in which private keys are $32$ bytes in size and public keys are $33$ bytes. Thus, the size of an element in $\mathbb{G}$ is $33$ bytes and that of an element in $\mathbb{Z}_q$ is $32$ bytes.
+
+[^2]: Monero uses the Edwards curve $\texttt{Ed25519}$ in which public and private keys are $32$ bytes each.
+
+[^3]: Monero Block Explorer, https://moneroblocks.info/stats/transaction-stats
+
+[^4]: If we assume that the range proofs for outputs per block are aggregated (i.e. they are owned by a single entity), then Bulletproofs+ can save about $1.1$ MB of data. 
+
+[^5]: Monero Blockchain Growth, https://moneroblocks.info/stats/blockchain-growth
+
+[^6]: The differences in running times of BP and BP+ will of course vary for different underlying curve implementations. 
+
+<!-- <p align=center><EM>Performance comparison of Bulletproofs and Bulletproofs+ over $\texttt{secp256k1}$ curve</EM></p> -->
 <TABLE border="1">
+<TR align=center><EM>Table 2. Performance comparison of Bulletproofs and Bulletproofs+ over $\texttt{secp256k1}$ curve</EM></TR>
 <TR><TH rowspan="3">$m$
 <TR><TH colspan="2">Proof size (B)<TH colspan="2">Generation time (ms)<TH colspan="2">Verification time (ms)
 <TR><TH>BP<TH>BP+<TH>BP<TH>BP+<TH>BP<TH>BP+
@@ -219,6 +248,34 @@ Moreover, proof generation and verification can be faster by 20% and 16% respect
 <TD>1018<TD>921
 <TD>2344.9<TD>2127.2 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>9.3%</small>
 <TD>927.7<TD>885.6 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>4.5%</small></TD>
+
+
+<!-- <p align=center><EM>Performance comparison of Bulletproofs and Bulletproofs+ over $\texttt{Ed25519}$ curve</EM></p> -->
+<TABLE border="1">
+<TR align=center><EM>Table 3. Performance comparison of Bulletproofs and Bulletproofs+ over $\texttt{Ed25519}$ curve</EM></TR>
+<TR><TH rowspan="3">$m$
+<TR><TH colspan="2">Proof size (B)<TH colspan="2">Generation time (ms)<TH colspan="2">Verification time (ms)
+<TR><TH>BP<TH>BP+<TH>BP<TH>BP+<TH>BP<TH>BP+
+<TR><TH>1
+<TD>672<TD>576
+<TD>140.5<TD>109.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.8%</small>
+<TD>56.5<TD>46.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>17.2%</small>
+<TR><TH>4
+<TD>800<TD>704
+<TD>550.3<TD>431.6 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.5%</small>
+<TD>214.3<TD>179.4 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>16.3%</small>
+<TR><TH>8
+<TD>864<TD>768
+<TD>1095.8<TD>864.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.0%</small>
+<TD>423.5<TD>359.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>15.2%</small>
+<TR><TH>16
+<TD>928<TD>832
+<TD>2190.3<TD>1772.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>19.0%</small>
+<TD>839.8<TD>730.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>13.0%</small>
+<TR><TH>32
+<TD>992<TD>896
+<TD>4392.0<TD>3687.4 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>14.8%</small>
+<TD>1702.4<TD>1528.3 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>10.2%</small></TD>  
 <!-- </TABLE>   -->
 
 
