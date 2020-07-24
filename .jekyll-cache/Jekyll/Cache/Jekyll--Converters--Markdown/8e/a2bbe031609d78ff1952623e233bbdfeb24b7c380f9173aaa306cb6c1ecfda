@@ -1,0 +1,73 @@
+I"�<h3 id="overview">Overview</h3>
+
+<p>Hello everyone! This CCS proposal is for implementing <a href="https://eprint.iacr.org/2020/735.pdf">Bulletproofs+</a> for range proofs in Monero. Currently, <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a> is employed for range proofs in Monero. Using Bulletproofs+, we aim to save about <strong>10%</strong> of the data being pushed to Monero blockchain everyday.
+We already have a proof of concept <a href="https://github.com/KZen-networks/bulletproofs">implementation</a> of Bulletproofs+ in Rust. Our simulations show that Bulletproofs+ could speed up proof generation and verification by <strong>21%</strong> and <strong>17%</strong> (Note: These improvements in timings will vary depending on how efficient the group operations over Ed25519 curve used in Monero are). In blogs <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part1.html">1</a> and <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part2.html">2</a> we cover in depth the techniques used in Bulletproofs+ and how they differ with Bulletproofs. Read below for more details on applicability of Bulletproofs+ to Monero.</p>
+
+<h3 id="team-and-scope">Team and Scope</h3>
+<p>I am <a href="https://suyash67.github.io/homepage">Suyash Bagad</a> and I just graduated with B.Tech and M.Tech in Electrical Engineering from IIT Bombay (India). My <a href="https://suyash67.github.io/homepage/assets/pdfs/suyash-masters-thesis.pdf">thesis</a> was primarily on designing and implementing novel proofs of reserves protocols for crypto exchanges mainly for Monero and Grin. I have also worked on a few <a href="https://eprint.iacr.org/2020/723">other</a> topics in cryptocurrency research.</p>
+
+<p>This will be a joint project together with <a href="https://github.com/omershlo">@omershlo</a> who is experienced in implementing complex cryptographic systems. Our goal is to provide a full implementation of the protocol (aggregated version) from the Bulletproof+ paper while re-using as much of the <a href="https://github.com/monero-project/monero/blob/master/src/ringct/bulletproofs.cc">existing code base</a> utilized for Bulletproofs.</p>
+
+<h3 id="funding-note">Funding Note</h3>
+<p>We estimate to complete the project in about 3 months in 3 steps as below:</p>
+<ul>
+  <li>Working Proof of Concept</li>
+  <li>Optimizations and Code quality</li>
+  <li>Benchmarking</li>
+</ul>
+
+<p>We need a funding equivalent to a standard researcher’s salary of $10k per month amounting to ~450 XMR (for 3 months) according to the moving average on Kraken. 
+The funding is proposed in 3 payouts of 50%, 30% and 20% respectively for the above 3 steps. This project will include both me and <a href="https://github.com/omershlo">@omershlo</a> working as well as academic advisory from <a href="https://users-cs.au.dk/orlandi/">Claudio Orlandi</a>.</p>
+
+<h3 id="details-on-how-bulletproofs-can-improve-monero">Details on how Bulletproofs+ can improve Monero</h3>
+<p>Security wise, Bulletproofs+ do not introduce any new assumptions on top of Bulletproofs. 
+It uses the weighted inner product protocol while Bulletproofs uses inner product protocol.
+Each Monero transaction contains <strong>2.5</strong> outputs on an average.
+This means that each transaction is accompanied by <strong>2.5</strong> range proofs (Bulletproofs as of now).
+As Monero uses the Ed25519 curve, the size of a single Bulletproofs proof is <strong>676</strong> bytes <a href="Monero uses the Edwards curve Ed25519 in which public and private keys are $32$ bytes each.">1</a>.
+This could be reduced by <strong>96</strong> bytes by using Bulletproofs+.
+In effect, about <strong>240</strong> bytes per transaction could be saved. 
+Average number of transactions on July 16th was <strong>11,417</strong> <a href="Monero Block Explorer, https://moneroblocks.info/stats/">2</a>.
+This implies that about <strong>2.7</strong> MB of data can be saved everyday <a href="If we assume that the range proofs for outputs per block are aggregated (i.e. they are owned by a single entity), then Bulletproofs+ can save about $1.1$ MB of data.">3</a>. 
+From the start of 2020 till this submission date, an average of <strong>28</strong> MB of data is added daily to the blockchain.
+Therefore, Bulletproofs+ can save about <strong>10\%</strong> of the data being added to the Monero blockchain!</p>
+
+<p>The running times of Bulletproofs and Bulletproofs+ over Ed25519 curve are noted below in Table 1.
+Note that the underlying Edwards curve’s operations are used from <a href="https://lib.rs/crates/cryptoxide">cryptoxide</a> library which is slower than the optimized operations in the more recent <a href="https://github.com/dalek-cryptography/curve25519-dalek">curve25519-dalek</a>’s implementation.
+As we are interested only in comparison as of now, unoptimized operations in the underlying curve library won’t matter. Bulletproofs+ shows a <strong>21\%</strong> faster proof generation and <strong>17\%</strong> faster proof verification than Bulletproofs. Although these numbers would slightly vary when the underlying library for group operations changes, they still look quite promising from a user (prover) as well as miner (verifier) point of view!</p>
+
+<table border="1">
+<tr align="center"><em>Table 1. Performance comparison of Bulletproofs and Bulletproofs+ over Ed25519</em></tr>
+<tr><th rowspan="3">m
+<tr><th colspan="2">Proof size (B)<th colspan="2">Generation time (ms)<th colspan="2">Verification time (ms)
+<tr><th>BP<th>BP+<th>BP<th>BP+<th>BP<th>BP+
+<tr><th>1
+<td>672<td>576
+<td>140.5<td>109.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.8%</small>
+<td>56.5<td>46.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>17.2%</small>
+<tr><th>4
+<td>800<td>704
+<td>550.3<td>431.6 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.5%</small>
+<td>214.3<td>179.4 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>16.3%</small>
+<tr><th>8
+<td>864<td>768
+<td>1095.8<td>864.8 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>21.0%</small>
+<td>423.5<td>359.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>15.2%</small>
+<tr><th>16
+<td>928<td>832
+<td>2190.3<td>1772.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>19.0%</small>
+<td>839.8<td>730.0 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>13.0%</small>
+<tr><th>32
+<td>992<td>896
+<td>4392.0<td>3687.4 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>14.8%</small>
+<td>1702.4<td>1528.3 &nbsp;&nbsp;<small style="color:green"><i class="fas fa-long-arrow-alt-down" style="color:green"></i>10.2%</small></td>  
+
+
+
+
+
+
+
+
+</td></td></td></td></td></th></tr></td></td></td></td></td></td></th></tr></td></td></td></td></td></td></th></tr></td></td></td></td></td></td></th></tr></td></td></td></td></td></td></th></tr></th></th></th></th></th></th></tr></th></th></th></tr></th></tr></table>
+:ET
