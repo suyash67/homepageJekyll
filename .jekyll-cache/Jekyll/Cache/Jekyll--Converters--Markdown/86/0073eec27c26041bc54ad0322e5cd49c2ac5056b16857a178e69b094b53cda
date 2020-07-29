@@ -1,0 +1,111 @@
+I"n<div class="home-description">
+    <!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images//cover2.png" />
+        <figcaption>Imparting knowledge of Smart-farming techniques to farmers in Nashik, Maharashtra.</figcaption>
+    </figure>
+
+
+    <!-- <h2 class="about-me", style="color: #515151;">
+    About Me 
+    <hr style="border: 0.4px solid#e2e2e2;"> 
+    </h2> -->
+</div>
+
+<h2 id="about-me">About Me</h2>
+
+<p>I am a final year student pursuing B.Tech and M.Tech (Dual Degree) in <a href="https://www.ee.iitb.ac.in/web">Electrical Engineering</a>, specialising in Communication and Signal Processing,
+at the <a href="http://iitb.ac.in/"> Indian Institute of Technology, Bombay</a>.
+I am broadly interested in cryptographic protocols that help strengthen the security and privacy guarantees of cryptocurrencies,
+paving way for a decentralized economy.
+I worked on <a href="/homepage/project/2019/10/19/eff-proof-of-reserves.html"> Designing Shorter, Privacy-Preserving Proof of Reserves for Cryptocurrency Exchanges</a> as a part of master’s thesis, 
+guided by <a href="https://www.ee.iitb.ac.in/~sarva/"> Prof. Saravanan Vijayakumaran</a>. <br id="paddedlinebreak" />
+I have also worked on analysing the confidentiality of amounts in Grin.</p>
+
+<div class="line-break-small">
+<br />
+</div>
+<p><u>Research Interests</u>: Applied Cryptography, Cryptocurrencies, Security &amp; Privacy in Blockchain, Zero-Knowlege Proofs, Neuromorphic Computing</p>
+<div class="line-break-small">
+    <br />
+</div>
+
+<p>Prior to my work in cryptocurrency research, I have worked with 
+<a href="https://www.ee.iitb.ac.in/wiki/faculty/udayan">Prof. Udayan Ganguly</a> on 
+<a href="/homepage/project/2018/11/30/plasticity-based-learning.html">Plasticity-based Learning</a> and
+<a href="/homepage/project/2019/05/01/dybm.html">Dynamic Boltzmann Machines</a>. I also did an internship 
+at <a href="https://www.cadence.com">Cadence Design Systems</a>, (Pune, India) under the mentorship of 
+<a href="https://www.linkedin.com/in/vijay-pawar-a620834/">Mr. Vijay Pawar</a> 
+on <a href="/homepage/project/2018/08/17/cadence-intern.html">Fast 3D &amp; Depth-separable Convolution on HiFi4 DSP</a>.</p>
+
+<div class="line-break-small">
+    <br />
+</div>
+
+<p>Apart from research, I have been actively involved in social service since my freshman year. 
+I was an Overall Coordinator of <a href="https://gymkhana.iitb.ac.in/~nss/home/">NSS, IIT Bombay</a> in 2018-‘19, 
+leading a 3-tier team of 400 volunteers in planning and executing more than 30 initiatives aimed at conserving 
+environment, educating the underprivileged and imbibing sustainability in our lives.</p>
+
+<h2 id="publications">Publications</h2>
+<ol>
+  <li>
+    <p><strong>Performance Trade-offs in Design of MimbleWimble Proofs of Reserves</strong> 
+  <a href="https://eprint.iacr.org/2020/938.pdf"><i class="far fa-file-pdf"></i></a>
+  <a href="https://github.com/suyash67/RevelioBP"><i class="fab fa-github"></i></a><br />
+Accepted at <em><a href="https://ieeesb.org/">IEEE Security &amp; Privacy on Blockchain</a> (IEEE S&amp;B)</em>, 2020<br />
+<strong>Suyash Bagad</strong> and Saravanan Vijayakumaran</p>
+  </li>
+  <li>
+    <p><strong>On the Confidentiality of Amounts in Grin</strong>
+  <a href="https://eprint.iacr.org/2020/723.pdf"><i class="far fa-file-pdf"></i></a> 
+  <a href="https://slides.com/suyashbagad/confidentiality-of-amounts-in-grin/fullscreen"><i class="fas fa-chalkboard"></i></a>
+  <a href="https://www.youtube.com/watch?v=EFrvrct3U2g&amp;t=4s"><i class="far fa-play-circle"></i></a><br />
+Accepted at <em><a href="https://www.cryptovalleyconference.com/">Crypto Valley Conference on Blockchain Technology</a> (CVCBT)</em>, 2020<br />
+<strong>Suyash Bagad</strong> and Saravanan Vijayakumaran</p>
+  </li>
+  <li>
+    <p><strong>MProve+: Privacy-Preserving Proof of Assets Protocol for Monero</strong><br />
+In preparation for submission to <em><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">IEEE Transactions on Information Forensics &amp; Security</a></em><sup>‡</sup> 
+<!-- Arijit Dutta<sup>&dagger;</sup>, **Suyash Bagad**<sup>&dagger;</sup> and Saravanan Vijayakumaran<br/>
+<sub>&dagger; : Equal contribution, &Dagger; : Journal Impact Factor: 6.211 </sub> -->
+Arijit Dutta, <strong>Suyash Bagad</strong> and Saravanan Vijayakumaran<br />
+<sub> ‡ : Journal Impact Factor: 6.211 </sub></p>
+  </li>
+</ol>
+
+<h2 id="updates">Updates</h2>
+<ul>
+  <li>
+    <p>July, 2020: Awarded <strong>Undergraduate Research Award</strong> for outstanding work in my master’s thesis, awarded to less than <strong>1%</strong> students in the graduating batch of 2020!</p>
+  </li>
+  <li>
+    <p>June, 2020: Presented my master’s thesis titled <strong>A Proof of Reserves Protocol with Short Proofs and a Method to Estimate Amount Upper Bounds for MimbleWimble</strong>. Report present <a href="/homepage/assets/pdfs/suyash-masters-thesis.pdf">here</a>, 
+slides <a href="https://slides.com/suyashbagad/ddp-thesis-presentation-suyashbagad/fullscreen">here</a> and
+video <a href="https://youtu.be/n67DXLNjKHg">here</a>.</p>
+  </li>
+  <li>
+    <p>May, 2020: Paper titled <strong>On Confidentiality of Amounts in Grin</strong>, first of its kind work on amount confidentiality of Pedersen commitments in Grin, accepted at <a href="https://www.cryptovalleyconference.com/">Crypto Valley Conference on Blockchain Technology</a>, 2020. Pre-print available <a href="https://eprint.iacr.org/2020/723.pdf">here</a> and presentation video <a href="https://youtu.be/EFrvrct3U2g">here</a>!</p>
+  </li>
+  <li>
+    <p>April, 2020: Paper on <strong>Performance Trade-offs in Design of MimbleWimble Proofs of Reserves</strong> 
+accepted at <a href="https://ieeesb.org/">IEEE Security &amp; Privacy on Blockchain</a>, 2020. Pre-print <a href="https://eprint.iacr.org/2020/938.pdf">here</a>!</p>
+  </li>
+  <li>
+    <p>Feb, 2020: Selected as <strong>1 out of 30</strong> students from all over India for the workshop on 
+<a href="https://www.icts.res.in/discussion-meeting/fabt2020">Foundational Aspects of Blockchain Technology</a>, 2020 at <em>International Centre for Theoretical Sciences</em>, TIFR, Bangalore</p>
+  </li>
+  <li>
+    <p>Jan, 2020: Appointed as Teaching Assistant of the course <a href="https://www.ee.iitb.ac.in/~sarva/courses/EE720/Spring2020.html">EE 720: Introduction to Number Theory and Cryptography</a></p>
+  </li>
+  <li>
+    <p>Oct, 2019: Successfully presented Dual-degree Phase 1 presentation to a committee consisting of <a href="https://www.ee.iitb.ac.in/~sarva/">Prof. Vijayakumaran</a> and <a href="https://www.ee.iitb.ac.in/wiki/faculty/patkar">Prof. Sachin Patkar</a>, Electrical Engineering, IIT Bombay (<a href="/homepage/assets/pdfs/ddp1_report.pdf">Report</a>)</p>
+  </li>
+  <li>
+    <p>Aug, 2019: Appointed as the <em>only</em> Teaching Assistant of the course <a href="https://www.ee.iitb.ac.in/~sarva/courses/EE465/Autumn2019.html">EE 465: Cryptocurrency &amp; Blockchain Technologies</a></p>
+  </li>
+</ul>
+
+:ET

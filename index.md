@@ -55,7 +55,7 @@ environment, educating the underprivileged and imbibing sustainability in our li
 
 ## Publications
 1. **Performance Trade-offs in Design of MimbleWimble Proofs of Reserves** 
-&nbsp; <a href="https://ieeesb.org/index.html#papers"><i class="far fa-file-pdf"></i></a>
+&nbsp; <a href="https://eprint.iacr.org/2020/938.pdf"><i class="far fa-file-pdf"></i></a>
 &nbsp; <a href="https://github.com/suyash67/RevelioBP"><i class="fab fa-github"></i></a>  
 Accepted at *[IEEE Security & Privacy on Blockchain](https://ieeesb.org/) (IEEE S&B)*, 2020  
 **Suyash Bagad** and Saravanan Vijayakumaran
@@ -76,7 +76,7 @@ Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
 
 
 ## Updates
-- Awarded **Undergraduate Research Award** for outstanding work in my master's thesis, being **1 out of 9** recipients in the graduating batch of 2020! 
+- July, 2020: Awarded **Undergraduate Research Award** for outstanding work in my master's thesis, awarded to less than **1%** students in the graduating batch of 2020! 
 
 - June, 2020: Presented my master's thesis titled **A Proof of Reserves Protocol with Short Proofs and a Method to Estimate Amount Upper Bounds for MimbleWimble**. Report present [here]({{ site.baseurl }}/assets/pdfs/suyash-masters-thesis.pdf), 
 slides [here](https://slides.com/suyashbagad/ddp-thesis-presentation-suyashbagad/fullscreen) and
@@ -85,7 +85,7 @@ video [here](https://youtu.be/n67DXLNjKHg).
 - May, 2020: Paper titled **On Confidentiality of Amounts in Grin**, first of its kind work on amount confidentiality of Pedersen commitments in Grin, accepted at [Crypto Valley Conference on Blockchain Technology](https://www.cryptovalleyconference.com/), 2020. Pre-print available [here](https://eprint.iacr.org/2020/723.pdf) and presentation video [here](https://youtu.be/EFrvrct3U2g)!
 
 - April, 2020: Paper on **Performance Trade-offs in Design of MimbleWimble Proofs of Reserves** 
-accepted at [IEEE Security & Privacy on Blockchain](https://ieeesb.org/), 2020. Pre-print to be added soon!
+accepted at [IEEE Security & Privacy on Blockchain](https://ieeesb.org/), 2020. Pre-print [here](https://eprint.iacr.org/2020/938.pdf)!
 
 - Feb, 2020: Selected as **1 out of 30** students from all over India for the workshop on 
 <a href="https://www.icts.res.in/discussion-meeting/fabt2020">Foundational Aspects of Blockchain Technology</a>, 2020 at *International Centre for Theoretical Sciences*, TIFR, Bangalore
