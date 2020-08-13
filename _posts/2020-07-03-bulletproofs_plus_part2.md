@@ -3,7 +3,7 @@ layout: project
 title: "Comparing Bulletproofs+ and Bulletproofs - Part II"
 categories: project
 tldr: "In this second part on comparing Bulletproofs+ and Bulletproofs, we briefly discuss the Bulletproofs range proof protocol. We have implemented Bulletproofs+ in KZen-networks' Bulletproofs library for quantitative comparison between the two protocols."
-caption: "  "
+caption: ""
 ---
 
 {% katexmm %}

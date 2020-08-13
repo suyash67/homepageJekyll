@@ -3,7 +3,7 @@ layout: project
 title: "Comparing Bulletproofs+ and Bulletproofs - Part I"
 categories: project
 tldr: "Bulletproofs+ is a recently proposed log-sized range proof protocol building upon the current state-of-the-art Bulletproofs protocol. In this first part, we briefly discuss the key differences between the inner product argument and the weighted inner product argument on which the two protocols rely on respectively."
-caption: "  "
+caption: ""
 ---
 
 {% katexmm %}

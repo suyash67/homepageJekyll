@@ -1,6 +1,13 @@
-I"~<div class="home-proj-list"><ul class="post-list">
+I"<div class="home-proj-list"><ul class="post-list">
         
             <!-- List projects here --><li>
+                    
+                        <li><span class="post-meta">Jul 3, 2020</span>
+                        <h3>
+                            <a class="post-link" href="/homepage/project/2020/07/03/bulletproofs_plus_part3.html">
+                            Comparing Bulletproofs+ and Bulletproofs - Part III
+                            </a>
+                        </h3>In the third part on comparing Bulletproofs+ and Bulletproofs, we discuss the single multi-exponentiation verification in Bulletproofs and Bulletproofs range proof protocols. This greatly speeds up the verification speeds. Dive in to see the math behind it!</li>      
                     
                         <li><span class="post-meta">Jul 3, 2020</span>
                         <h3>
