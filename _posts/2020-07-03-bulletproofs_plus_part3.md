@@ -250,11 +250,12 @@ Thus, an aggregated BP+ range proof can be verified by a single multi-exponentia
 
 ### Comparison of Verification Times
 
-The following table shows verification times for BP and BP+ for $64$-bit range proofs over $\texttt{secp256k1}$ curve in Rust.
+The following plot shows verification times for BP and BP+ for $64$-bit range proofs over $\texttt{secp256k1}$ curve in Rust.
 The code can be found [here](https://github.com/KZen-networks/bulletproofs).
 Note that the verification speed can be further improved using [Pipenger's exponentiation algorithm](https://cr.yp.to/papers/pippenger.pdf) for computing a multi-exponentiation.
 All simulations were performed on an Intel® Core™ i7-5500U CPU running at 2.40GHz.
 
+<!-- 
 |  $m$ 	| BP Verification (ms) 	| BP+ Verification (ms) 	|
 |:--:	|:--------------------:	|:---------------------:	|
 | 1  	|         14.15        	|         14.36         	|
@@ -263,6 +264,11 @@ All simulations were performed on an Intel® Core™ i7-5500U CPU running at 2.4
 | 8  	|        121.19        	|         109.23        	|
 | 16 	|        279.70        	|         235.26        	|
 | 32 	|        718.34        	|         556.90        	|
+-->
+
+<center>
+{% include image.html name="bp_bp_plus_ver_plot-1.png" caption="Plot of verification times of $64$-bit BP and BP+ range proofs for different aggregation sizes $m$." %}
+</center>
 
 [^1]: The challenge $x_u$ is used to multiply the given inner product $\langle \textbf{a},\textbf{b} \rangle$ in the exponent of a generator $g \in \mathbb{G}$. BP paper uses $u \in \mathbb{G}$ in Protocol 1, 2 instead of $g$. 
 

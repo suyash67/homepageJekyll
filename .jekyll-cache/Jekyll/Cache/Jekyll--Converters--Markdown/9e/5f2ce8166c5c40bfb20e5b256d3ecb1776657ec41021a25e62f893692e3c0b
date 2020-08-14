@@ -1,4 +1,4 @@
-I"™¸
+I"‡½
 <p>In this third part on comparing <a href="https://eprint.iacr.org/2020/735.pdf">Bulletproofs+</a> and <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a>, we will delve into the math of aggregate verification of the range proofs. We compare the verification speeds of both of the protocols qualitatively as well as quantitatively. Please read blogs <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part1.html">1</a>, <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part2.html">2</a> for a primer on Bulletproofs and Bulletproofs+.</p>
 
 <h3 id="aggregated-range-proof-protocols">Aggregated Range Proof Protocols</h3>
@@ -287,6 +287,20 @@ All simulations were performed on an IntelÂ® Coreâ„¢ i7-5500U CPU running at 2.4
     </tr>
   </tbody>
 </table>
+
+<object data="/homepage/assets/pdfs/bp_bp_plus_ver_plot.pdf" width="100%" height="1000" type="application/pdf">
+</object>
+
+<center>
+<!--  -->
+
+
+    <figure>
+        <img src="/homepage/assets/images/Comparing Bulletproofs+ and Bulletproofs - Part III/bp_bp_plus_ver_plot-1.png" />
+        <figcaption>Plot of verification times of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn></mrow><annotation encoding="application/x-tex">64</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span></span></span></span>-bit BP and BP+ range proofs for different aggregation sizes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>.</figcaption>
+    </figure>
+
+</center>
 
 <div class="footnotes">
   <ol>
