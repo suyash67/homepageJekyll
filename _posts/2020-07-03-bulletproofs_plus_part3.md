@@ -174,7 +174,79 @@ Thus, an aggregated BP range proof can be verified by a single multi-exponentiat
 
 ### Bulletproofs+ Verification
 
-Coming soon...
+To verify an aggregated Bulletproofs+ range proof $\Pi_{bp+}$, a verifier needs to compute $\hat{A}$ and run the $\text{verify-}zk\text{-}\textsf{WIP}$.
+
+$$
+\tag{8}
+\hat{A} = A \cdot
+\textbf{g}^{-z \cdot \textbf{1}^{mn}} \cdot 
+\textbf{h}^{z \cdot \textbf{1}^{mn} + \textbf{d} \circ \overleftarrow{y}^{mn}} \cdot
+\textbf{V}^{y^{mn+1} \cdot z^2 \cdot \textbf{z}^m} \cdot g^{\zeta(y,z)} 
+\\[6pt]
+\text{verify-}zk\text{-}\textsf{WIP}_{y}(\textbf{g}, \textbf{h}, g,h, \hat{A})
+$$
+
+where $\zeta(y,z) = (z - z^2) y \cdot \langle \textbf{1}^{mn},\textbf{y}^{nm} \rangle - zy^{mn+1} \cdot \langle \textbf{1}^{mn}, \textbf{d} \rangle$ and $\overleftarrow{y}^{nm} = (y^{mn}, y^{mn-1}, \dots, y)$.
+Similar to the inner product argument, the verification in weighted inner product argument too can be expressed as a single equation by unrolling recursion.
+
+$$
+\tag{9}
+\textbf{g}^{e \cdot r' \cdot \textbf{s}} \cdot 
+\textbf{h}^{e \cdot s' \cdot \textbf{s}'} \cdot 
+g^{r' \odot s'} \cdot
+h^{\delta'} 
+\stackrel{?}{=} 
+(\hat{A})^{e^2} \cdot 
+\left(
+    \prod_{j=1}^{\text{log}_2(nm)} L_j^{e^2 \cdot x_j^2} \cdot R_j^{e^2 \cdot x_j^{-2}}
+\right) \cdot
+(A')^{e} \cdot B 
+$$
+
+By substituting $\hat{A}$, the verification boils downs to a single multi-exponentiation check.
+
+$$
+\textbf{g}^{e \cdot r' \cdot \textbf{s}} \cdot 
+\textbf{h}^{e \cdot s' \cdot \textbf{s}'} \cdot 
+g^{r' \odot s'} \cdot
+h^{\delta'} 
+\stackrel{?}{=} 
+\left(
+    A \cdot
+    \textbf{g}^{-z \cdot \textbf{1}^{mn}} \cdot 
+    \textbf{h}^{z \cdot \textbf{1}^{mn} + \textbf{d} \circ \overleftarrow{y}^{mn}} \cdot
+    \textbf{V}^{y^{mn+1} \cdot z^2 \cdot \textbf{z}^m} \cdot g^{\zeta(y,z)} 
+\right)^{e^2} \cdot 
+\\
+\left(
+    \prod_{j=1}^{\text{log}_2(nm)} L_j^{e^2 \cdot x_j^2} \cdot R_j^{e^2 \cdot x_j^{-2}}
+\right) \cdot
+(A')^{e} \cdot B 
+$$
+
+$$
+\implies 
+\textbf{g}^{e \cdot r' \cdot \textbf{s} + ze^2 \textbf{1}^{mn}} \cdot 
+\textbf{h}^{e \cdot s' \cdot \textbf{s}' - ze^2 \cdot \textbf{1}^{mn} - e^2 \cdot \textbf{d} \circ \overleftarrow{y}^{mn}} \cdot 
+g^{r' \odot s' - e^2\zeta(y,z)} \cdot
+h^{\delta'} \cdot
+A^{-e^2} \cdot
+\\
+\textbf{V}^{-e^2 y^{mn+1} \cdot z^2 \cdot \textbf{z}^m} \cdot 
+\textbf{L}^{\textbf{x}_L} \cdot
+\textbf{R}^{\textbf{x}_R} \cdot
+(A')^{-e} \cdot B^{-1} 
+$$
+
+Note here, we have 
+$$
+\begin{aligned}
+\textbf{x}_L &= e^2 \cdot (-x_1^2, -x_2^2, \dots, -x_{\text{log}_2(nm)}^2) \\
+\textbf{x}_R &= e^2 \cdot (-x_1^{-2}, -x_2^{-2}, \dots, -x_{\text{log}_2(nm)}^{-2}),
+\end{aligned}
+$$
+
+Thus, an aggregated BP+ range proof can be verified by a single multi-exponentiation check of size $2mn + 2\text{log}_2(mn) + m + 5$.
 
 [^1]: The challenge $x_u$ is used as to multiply the given inner product in the exponent of a generator $g \in \mathbb{G}$. BP paper uses $u \in \mathbb{G}$ in Protocol 1, 2 instead of $g$. 
 
