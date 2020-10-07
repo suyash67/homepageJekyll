@@ -76,6 +76,8 @@ Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
 
 
 ## Updates
+- Sept, 2020: Our research on [Novel Proof of Reserves Protocol with Shorter Proof Sizes](https://www.alumni.iitb.ac.in/en/newsletter-article/2020-09/novel-proof-reserves-protocol-shorter-proof-sizes) was featured in the monthly Newsletter of [Alumni & Corporate Relations](https://www.alumni.iitb.ac.in/en), IIT Bombay.
+
 - July, 2020: Awarded **Undergraduate Research Award** for outstanding work in my master's thesis, awarded to less than **1%** students in the graduating batch of 2020! 
 
 - June, 2020: Presented my master's thesis titled **A Proof of Reserves Protocol with Short Proofs and a Method to Estimate Amount Upper Bounds for MimbleWimble**. Report present [here]({{ site.baseurl }}/assets/pdfs/suyash-masters-thesis.pdf), 

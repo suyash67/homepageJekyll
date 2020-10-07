@@ -1,0 +1,3 @@
+I"j
+<p>In this third part on comparing <a href="https://eprint.iacr.org/2020/735.pdf">Bulletproofs+</a> and <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a>, we will delve into the math of aggregate verification of the range proofs. We compare the verification speeds of both of the protocols qualitatively as well as quantitatively. Please read blogs <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part1.html">1</a>, <a href="https://suyash67.github.io/homepage/project/2020/07/03/bulletproofs_plus_part2.html">2</a> for a primer on Bulletproofs and Bulletproofs+.</p>
+:ET
