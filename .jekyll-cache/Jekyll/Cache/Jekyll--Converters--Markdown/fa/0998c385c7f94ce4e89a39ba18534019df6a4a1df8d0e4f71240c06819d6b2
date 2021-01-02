@@ -1,13 +1,13 @@
-I"�<p>Cryptocurrency exchanges (also called as crypto exchanges) provide a convenient way for customers to own and trade cryptocurrencies in exchange for fiat currencies. However, in cases of hacks and internal frauds in such exchanges result in huge loss of customer funds <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. 
+I"H<p>Cryptocurrency exchanges (also called as crypto exchanges) provide a convenient way for customers to own and trade cryptocurrencies in exchange for fiat currencies. However, in cases of hacks and internal frauds in such exchanges result in huge loss of customer funds <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>. 
 Proof of solvency is one of the preventive measures which could help in early detection of such scams. As a part of my master’s thesis, I am working on designing a proof of reserves for crypto exchanges wherein the exchanges can prove that they own funds enough to recover their liabilities in unfortunate cases of hack or frauds.</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://blockonomi.com/mt-gox-hack/">The History of the Mt Gox Hack: Bitcoin’s Biggest Heist</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://blockonomi.com/mt-gox-hack/">The History of the Mt Gox Hack: Bitcoin’s Biggest Heist</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p><a href="https://www.bbc.com/news/world-us-canada-47203706">Quadriga: The cryptocurrency exchange that lost $135m</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://www.bbc.com/news/world-us-canada-47203706">Quadriga: The cryptocurrency exchange that lost $135m</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

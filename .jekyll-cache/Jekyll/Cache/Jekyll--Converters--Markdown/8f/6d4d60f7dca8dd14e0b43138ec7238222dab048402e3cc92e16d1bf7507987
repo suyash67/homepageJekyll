@@ -1,5 +1,0 @@
-I"ï
-<p>The <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a> paper introduces a log-sized inner-product argument and thereafter constructs the state-of-the-art range proof protocol in non-trusted setup setting.
-We will discuss the inner-product argument and how it motivated the idea of recursive proof systems like <a href="https://eprint.iacr.org/2019/1021.pdf">Halo</a>.
-We assume basic familiarity of the reader with elliptic curve group operations and Pedersen commitments.</p>
-:ET

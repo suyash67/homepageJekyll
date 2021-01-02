@@ -1,13 +1,13 @@
-I">
-<p><a href="https://eprint.iacr.org/2020/735.pdf">Bulletproofs+</a> is a recently proposed range proof which is similar in spirit to <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a>. Both of these range proof protocols enable proof sizes logarithmic in the number of bits of the range using a recursive inner product protocol. Bulletproofs relies on the improved inner product protocol <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> while Bulletproofs+ uses a weighted inner product protocol <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+I"�
+<p><a href="https://eprint.iacr.org/2020/735.pdf">Bulletproofs+</a> is a recently proposed range proof which is similar in spirit to <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a>. Both of these range proof protocols enable proof sizes logarithmic in the number of bits of the range using a recursive inner product protocol. Bulletproofs relies on the improved inner product protocol <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> while Bulletproofs+ uses a weighted inner product protocol <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>.</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Benedikt Bünz et al, “Bulletproofs: Short Proofs for Confidential Transactions and More”, in <em>Cryptology ePrint Archive, Report 2017/1066</em>, Available at <a href="https://eprint.iacr.org/2017/1066.pdf">https://eprint.iacr.org/2017/1066.pdf</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Benedikt Bünz et al, “Bulletproofs: Short Proofs for Confidential Transactions and More”, in <em>Cryptology ePrint Archive, Report 2017/1066</em>, Available at <a href="https://eprint.iacr.org/2017/1066.pdf">https://eprint.iacr.org/2017/1066.pdf</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>Chung H. et al, “Bulletproofs+: Shorter Proofs for Privacy-Enhanced Distributed Ledger”, in <em>Cryptology ePrint Archive, Report 2020/735</em>, Available at <a href="https://eprint.iacr.org/2020/735.pdf">https://eprint.iacr.org/2020/735.pdf</a>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>Chung H. et al, “Bulletproofs+: Shorter Proofs for Privacy-Enhanced Distributed Ledger”, in <em>Cryptology ePrint Archive, Report 2020/735</em>, Available at <a href="https://eprint.iacr.org/2020/735.pdf">https://eprint.iacr.org/2020/735.pdf</a>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

@@ -8,6 +8,12 @@ order: 5
 Apart from research, I like to travel to new places and explore the beauty of nature. I love trekking, camping, hiking and cycling.
 
 
+<h4> Sikkim & Darjeeling <p><span class="post-meta">Dec, 2020</span></p> </h4>
+Magnificent landscapes with beautiful lakes, snow-clad mountains, dense coniferous forests and tea plantations and most importantly,
+a much needed break from 2020! 
+
+{% include carousel.html name="sikkim-darjeeling" %}
+
 <h4> Hampi, Karnataka <p><span class="post-meta">Feb, 2020</span></p> </h4>
 World Heritage site with delightful ancient architecture.
 
