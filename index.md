@@ -9,7 +9,7 @@ layout: home
 ---
 
 <div class="home-description">
-    {% include image.html name="cover2.png" caption="Imparting knowledge of Smart-farming techniques to farmers in Nashik, Maharashtra." %}
+    {% include image.html name="cover2.png" caption="Imparting knowledge of Smart-farming techniques to farmers in a field visit in Nashik, India." %}
 
     <!-- <h2 class="about-me", style="color: #515151;">
     About Me 
@@ -19,18 +19,13 @@ layout: home
 
 ## About Me 
 
-I am a final year student pursuing B.Tech and M.Tech (Dual Degree) in <a href="https://www.ee.iitb.ac.in/web">Electrical Engineering</a>, specialising in Communication and Signal Processing,
-at the <a href = "http://iitb.ac.in/"> Indian Institute of Technology, Bombay</a>.
-I am broadly interested in cryptographic protocols that help strengthen the security and privacy guarantees of cryptocurrencies,
-paving way for a decentralized economy.
-I worked on <a href="{{ site.baseurl }}/project/2019/10/19/eff-proof-of-reserves.html"> Designing Shorter, Privacy-Preserving Proof of Reserves for Cryptocurrency Exchanges</a> as a part of master's thesis, 
-guided by <a href="https://www.ee.iitb.ac.in/~sarva/"> Prof. Saravanan Vijayakumaran</a>. <br id="paddedlinebreak" />
-I have also worked on analysing the confidentiality of amounts in Grin.
+I am a Cryptography Engineer at [Aztec](https://aztec.network/index.html). 
+I love working on the cryptography aspect of cryptocurrencies and blockchains. 
+I am broadly interested in cryptographic protocols that help strengthen the privacy and scalability of cryptocurrencies.
 
-<div class="line-break-small">
-<br/>
-</div>
-<u>Research Interests</u>: Applied Cryptography, Cryptocurrencies, Security & Privacy in Blockchain, Zero-Knowlege Proofs, Neuromorphic Computing
+I graduated with a B.Tech and M.Tech in <a href="https://www.ee.iitb.ac.in/web">Electrical Engineering</a> from the <a href = "http://iitb.ac.in/"> Indian Institute of Technology, Bombay</a> in June 2020. My [thesis]({{ site.baseurl }}/assets/pdfs/suyash-masters-thesis.pdf) was primarily on designing Shorter, Privacy-Preserving Proof of Reserves for cryptocurrency exchanges, guided by <a href="https://www.ee.iitb.ac.in/~sarva/"> Prof. Saravanan Vijayakumaran</a>.
+
+<u>Research Interests</u>: Applied Cryptography, Zero-Knowlege Proofs, Cryptocurrencies, Security & Privacy on the Blockchain
 <div class="line-break-small">
     <br/>
 </div>
@@ -39,16 +34,15 @@ Prior to my work in cryptocurrency research, I have worked with
 <a href="https://www.ee.iitb.ac.in/wiki/faculty/udayan">Prof. Udayan Ganguly</a> on 
 <a href="{{ site.baseurl }}/project/2018/11/30/plasticity-based-learning.html">Plasticity-based Learning</a> and
 <a href="{{ site.baseurl }}/project/2019/05/01/dybm.html">Dynamic Boltzmann Machines</a>. I also did an internship 
-at <a href="https://www.cadence.com">Cadence Design Systems</a>, (Pune, India) under the mentorship of 
-<a href="https://www.linkedin.com/in/vijay-pawar-a620834/">Mr. Vijay Pawar</a> 
-on <a href="{{ site.baseurl }}/project/2018/08/17/cadence-intern.html">Fast 3D & Depth-separable Convolution on HiFi4 DSP</a>.
+at <a href="https://www.cadence.com">Cadence Design Systems</a> (Pune, India)
+on <a href="{{ site.baseurl }}/project/2018/08/17/cadence-intern.html">Fast Convolution on HiFi4 DSP</a>.
 
 <div class="line-break-small">
     <br/>
 </div>
 
-Apart from research, I have been actively involved in social service since my freshman year. 
-I was an Overall Coordinator of <a href="https://gymkhana.iitb.ac.in/~nss/home/">NSS, IIT Bombay</a> in 2018-'19, 
+Apart from research, I was actively involved in social service since my freshman year in college. 
+I was an Overall Coordinator of <a href="https://gymkhana.iitb.ac.in/~nss/home/">NSS, IIT Bombay</a> in 2018-19, 
 leading a 3-tier team of 400 volunteers in planning and executing more than 30 initiatives aimed at conserving 
 environment, educating the underprivileged and imbibing sustainability in our lives.
 
@@ -68,14 +62,14 @@ Accepted at *[Crypto Valley Conference on Blockchain Technology](https://www.cry
 **Suyash Bagad** and Saravanan Vijayakumaran  
 
 3. **MProve+: Privacy-Preserving Proof of Assets Protocol for Monero**  
-In preparation for submission to *[IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)*<sup>&Dagger;</sup> 
-<!-- Arijit Dutta<sup>&dagger;</sup>, **Suyash Bagad**<sup>&dagger;</sup> and Saravanan Vijayakumaran<br/>
-<sub>&dagger; : Equal contribution, &Dagger; : Journal Impact Factor: 6.211 </sub> -->
+Submitted to *[IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)*<sup>&Dagger;</sup>  
 Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
 <sub> &Dagger; : Journal Impact Factor: 6.211 </sub>
 
 
 ## Updates
+- Sept, 2020: Started working as a cryptography engineer with [Aztec](https://aztec.network/index.html).
+
 - Sept, 2020: Our research on [Novel Proof of Reserves Protocol with Shorter Proof Sizes](https://www.alumni.iitb.ac.in/en/newsletter-article/2020-09/novel-proof-reserves-protocol-shorter-proof-sizes) was featured in the monthly Newsletter of [Alumni & Corporate Relations](https://www.alumni.iitb.ac.in/en), IIT Bombay.
 
 - July, 2020: Awarded **Undergraduate Research Award** for outstanding work in my master's thesis, awarded to less than **1%** students in the graduating batch of 2020! 
@@ -91,11 +85,4 @@ accepted at [IEEE Security & Privacy on Blockchain](https://ieeesb.org/), 2020. 
 
 - Feb, 2020: Selected as **1 out of 30** students from all over India for the workshop on 
 <a href="https://www.icts.res.in/discussion-meeting/fabt2020">Foundational Aspects of Blockchain Technology</a>, 2020 at *International Centre for Theoretical Sciences*, TIFR, Bangalore
-
-- Jan, 2020: Appointed as Teaching Assistant of the course [EE 720: Introduction to Number Theory and Cryptography](https://www.ee.iitb.ac.in/~sarva/courses/EE720/Spring2020.html)
-
-- Oct, 2019: Successfully presented Dual-degree Phase 1 presentation to a committee consisting of [Prof. Vijayakumaran](https://www.ee.iitb.ac.in/~sarva/) and [Prof. Sachin Patkar](https://www.ee.iitb.ac.in/wiki/faculty/patkar), Electrical Engineering, IIT Bombay ([Report]({{ site.baseurl }}/assets/pdfs/ddp1_report.pdf))
-
-- Aug, 2019: Appointed as the *only* Teaching Assistant of the course [EE 465: Cryptocurrency & Blockchain Technologies](https://www.ee.iitb.ac.in/~sarva/courses/EE465/Autumn2019.html)
-
 
