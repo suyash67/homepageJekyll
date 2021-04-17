@@ -1,4 +1,4 @@
-I"\<p>Dynamic Boltzmann Machine (DyBM) was proposed by <em>Osogami at al.</em> in 2015 when their team at <a href="https://www.ibm.com/blogs/research/category/ibmres-tokyo/">IBM, Tokyo</a> showed how a network of just 7 neurons could memorize a sequence of letters of alphabet<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>. Inspired from this work, we set out to explore DyBM and realize its usefulness in boosting performance in time-series prediction related tasks.</p>
+I"k<p>Dynamic Boltzmann Machine (DyBM) was proposed by <em>Osogami at al.</em> in 2015 when their team at <a href="https://www.ibm.com/blogs/research/category/ibmres-tokyo/">IBM, Tokyo</a> showed how a network of just 7 neurons could memorize a sequence of letters of alphabet<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Inspired from this work, we set out to explore DyBM and realize its usefulness in boosting performance in time-series prediction related tasks.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
