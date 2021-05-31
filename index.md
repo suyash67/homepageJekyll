@@ -51,23 +51,27 @@ environment, educating the underprivileged and imbibing sustainability in our li
 1. **Performance Trade-offs in Design of MimbleWimble Proofs of Reserves** 
 &nbsp; <a href="https://eprint.iacr.org/2020/938.pdf"><i class="far fa-file-pdf"></i></a>
 &nbsp; <a href="https://github.com/suyash67/RevelioBP"><i class="fab fa-github"></i></a>  
-Accepted at *[IEEE Security & Privacy on Blockchain](https://ieeesb.org/) (IEEE S&B)*, 2020  
-**Suyash Bagad** and Saravanan Vijayakumaran
+**Suyash Bagad** and Saravanan Vijayakumaran  
+[IEEE Security & Privacy on Blockchain](https://ieeesb.org/) (IEEE S&B), 2020  
+
 
 2. **On the Confidentiality of Amounts in Grin**
 &nbsp; <a href="https://eprint.iacr.org/2020/723.pdf"><i class="far fa-file-pdf"></i></a> 
 &nbsp; <a href="https://slides.com/suyashbagad/confidentiality-of-amounts-in-grin/fullscreen"><i class="fas fa-chalkboard"></i></a>
 &nbsp; <a href="https://www.youtube.com/watch?v=EFrvrct3U2g&t=4s"><i class="far fa-play-circle"></i></a>  
-Accepted at *[Crypto Valley Conference on Blockchain Technology](https://www.cryptovalleyconference.com/) (CVCBT)*, 2020  
 **Suyash Bagad** and Saravanan Vijayakumaran  
+[Crypto Valley Conference on Blockchain Technology](https://www.cryptovalleyconference.com/) (CVCBT), 2020  
 
-3. **MProve+: Privacy-Preserving Proof of Assets Protocol for Monero**  
-Submitted to *[IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)*<sup>&Dagger;</sup>  
-Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran<br/>
+
+3. **MProve+: Privacy Enhancing Proof of Reserves Protocol for Monero**  
+Arijit Dutta, **Suyash Bagad** and Saravanan Vijayakumaran  
+[IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)<sup>&Dagger;</sup>  
 <sub> &Dagger; : Journal Impact Factor: 6.211 </sub>
 
 
 ## Updates
+- May, 2021: Paper on **Privacy Enhancing Proof of Reserves Protocol for Monero** accepted to the journal [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206).
+
 - Sept, 2020: Started working as a cryptography engineer with [Aztec](https://aztec.network/index.html).
 
 - Sept, 2020: Our research on [Novel Proof of Reserves Protocol with Shorter Proof Sizes](https://www.alumni.iitb.ac.in/en/newsletter-article/2020-09/novel-proof-reserves-protocol-shorter-proof-sizes) was featured in the monthly Newsletter of [Alumni & Corporate Relations](https://www.alumni.iitb.ac.in/en), IIT Bombay.
