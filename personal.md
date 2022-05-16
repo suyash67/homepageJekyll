@@ -5,7 +5,21 @@ permalink: /personal/
 order: 5
 ---
 
-Apart from research, I like to travel to new places and explore the beauty of nature. I love trekking, camping, hiking and cycling.
+Apart from research, I like to travel to new places and explore the beauty of nature.
+
+<!-- I love trekking, camping, hiking and cycling. -->
+
+<h4> Amsterdam <p><span class="post-meta">April, 2022</span></p> </h4>
+
+{% include carousel.html name="ams2022" %}
+
+<h4> Germany <p><span class="post-meta">April, 2022</span></p> </h4>
+
+{% include carousel.html name="ger2022" %}
+
+<h4> Cancun, Mexico <p><span class="post-meta">March, 2022</span></p> </h4>
+
+{% include carousel.html name="mex2022" %}
 
 <h4> Pondicherry <p><span class="post-meta">Sept, 2021</span></p> </h4>
 
@@ -49,5 +63,5 @@ a much needed break from 2020!  -->
 
 {% include carousel.html name="bhivpuri" %}
 
-<h4> Aksa Beach, Mumbai <p><span class="post-meta">March, 2016</span></p> </h4>
-{% include carousel.html name="aksa" %}
+<!-- <h4> Aksa Beach, Mumbai <p><span class="post-meta">March, 2016</span></p> </h4>
+{% include carousel.html name="aksa" %} -->
